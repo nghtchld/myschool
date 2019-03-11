@@ -1,0 +1,563 @@
+Sherwood State School
+
+URL
+https://www.myschool.edu.au/school/46461/naplan/similar
+
+POST data
+SchoolYearId=5
+DomainId=1
+ViewModeId=0
+
+POST data ranges
+SchoolYearId=5 (3 | 5)
+DomainId=1 (1, 5)
+ViewModeId=0 (0, 2)
+
+cURL
+curl "https://www.myschool.edu.au/school/46461/naplan/similar" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "Accept-Language: en-US,en;q=0.5" -H "Referer: https://www.myschool.edu.au/school/46461/naplan/similar" -H "Content-Type: application/x-www-form-urlencoded" -H "DNT: 1" -H "Connection: keep-alive" -H "Cookie: __cfduid=dfc7103afe9174b980009a8a9f92bf19f1551606106" -H "Upgrade-Insecure-Requests: 1" -H "TE: Trailers" --data "SchoolYearId=5&DomainId=1&ViewModeId=0"
+
+Response
+
+<!doctype html>
+<html class="no-js" lang="en-AU">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Similar schools | My School</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Content/css/styles.min.css?v-We8xNbP/ufRz1j4rAyzGsA==" />
+    <!-- Scripts -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MF53KM3');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+        if (self == top) {
+            document.documentElement.style.visibility = 'visible';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    var appInsights = window.appInsights || function (a) {
+        function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement("script"); b.src = a.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js", d.getElementsByTagName("script")[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; f.length;)b("track" + f.pop()); if (b("setAuthenticatedUserContext"), b("clearAuthenticatedUserContext"), b("startTrackEvent"), b("stopTrackEvent"), b("startTrackPage"), b("stopTrackPage"), b("flush"), !a.disableExceptionTracking) { f = "onerror", b("_" + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c["_" + f](a, b, d, e, h), i } } return c
+    }({
+        instrumentationKey: "7c83de46-1f56-4f76-b284-7a776ee2e225"
+    });
+
+    window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length && appInsights.trackPageView();
+    </script>
+</head>
+<body >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF53KM3"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="site-container">
+        <div class="site-pusher">
+            <header>
+    <div class="header-wrapper">
+        <div class="header__icon" id="header__icon"></div>
+        <div id="masthead">
+            <div class="logo">
+                <a href="/">
+                    <img src="/Content/images/logos/logo.svg" alt="My School" />
+                </a>
+            </div>
+
+            <div class="alt-logo">
+                <a href="https://www.acara.edu.au" target="_blank">
+                    <img src="/Content/images/logos/acara.svg" alt="Australian Curriculum, Assessment and Reporting Authority" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="menu">
+        <div>
+            <div class="main-menu">
+                <ul>
+                            <li><a href="/" target="" class="">Find a school</a></li>
+                            <li><a href="/about/" target="" class="">About</a></li>
+                            <li><a href="/more-information/" target="" class="">More information</a></li>
+                            <li><a href="/glossary/" target="" class="">Glossary</a></li>
+                            <li><a href="/contact/" target="" class="">Contact ACARA</a></li>
+                </ul>
+            </div>
+
+            <button onclick="searchToggle()" class="dropbtn" id="uid-search-menu-overlay-button">
+                <img src="/Content/images/search.svg" alt="search" />
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="dropdown-wrapper">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'search1')" id="defaultOpen">Find a school</button>
+                        <button class="tablinks" onclick="openCity(event, 'search2')">Search website</button>
+                    </div>
+
+                    <div id="search1" class="tabcontent">
+                        <form id="headerSchoolSearchForm" action="/school-search" method="GET">
+                            <input id="FormPostedHeader" name="FormPosted" type="hidden" value="True" />
+                            <div class="search-field">
+                                <div class="search-wrapper">
+                                    <label for="HeaderSchoolSearchQuery" class="visuallyhidden">School Search</label>
+                                    <input type="text" 
+                                           data-msg="Please enter a school name" 
+                                           placeholder="Search by school name or suburb" 
+                                           name="SchoolSearchQuery" 
+                                           id="HeaderSchoolSearchQuery" />
+                                    <button type="submit" id="goMenuOne">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="search2" class="tabcontent">
+                        <form id="headerWebSearchForm" action="/web-search" method="GET">
+                            <div class="search-field">
+                                <div class="search-wrapper">
+                                    <label for="HeaderWebSearchQuery" class="visuallyhidden">Web Search</label>
+                                    <input type="text" 
+                                           data-msg="Please enter a search term" 
+                                           placeholder="Search website for content" 
+                                           name="SearchQuery" 
+                                           id="HeaderWebSearchQuery">
+                                    <button type="submit" id="goMenuTwo">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div id="myDropdownOverlay" onclick="searchToggle()"></div>
+            <div class="principle-login-mobile-nav">
+                <a href="/principals/login">Principals' login</a>
+            </div>
+        </div>
+    </nav>
+</header>
+            
+
+
+        
+<div class="topsection">
+    <div class="topsection-wrapper">
+        
+        <h1>Sherwood State School, Sherwood, QLD</h1>
+    </div>
+    <div id="submenu">
+        <span class="nav-title">NAPLAN <span class="fa fa-angle-down" aria-hidden="true"></span></span>
+        <ul class="desktopshow">
+            <li>
+                <a id="schoolProfile" href="/school/46461" class="">School profile</a>
+            </li>
+            <li>
+                <a id="naplan" href="/school/46461/naplan" class="selected">NAPLAN</a>
+            </li>
+            <li>
+                <a href="/school/46461/attendance" class="">Attendance</a>
+            </li>
+            <li>
+                <a id="finances" href="/school/46461/finances" class="">Finances</a>
+            </li>
+            <li>
+                <a id="vetinschools" href="/school/46461/vetinschools" class="">VET in schools</a>
+            </li>
+            <li>
+                <a href="/school/46461/seniorsecondary" class="">Senior secondary</a>
+            </li>
+            <li>
+                <a id="map" href="/school/46461/schoolmap" class="">Schools map</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <div id="container" class="fullwidth similar-schools">
+
+            
+
+<div class="intro-section">
+    <h3 class="inline">NAPLAN results:</h3>
+    <div id="naplan-submenu">
+        <a class="nav-title" href="#">Similar schools <em class="fa fa-angle-down" aria-hidden="true"></em></a>    
+        <ul>
+                <li><a href="/school/46461/naplan/numbers">Numbers</a></li>
+                <li><a href="/school/46461/naplan/bands">Bands</a></li>
+                <li><a href="/school/46461/naplan/graphs">Graphs</a></li>
+                <li><a href="/school/46461/naplan/studentgain">Student gain</a></li>
+        </ul>
+    </div>
+</div>
+
+            <p><span>This page shows schools with a similar <a rel="noopener noreferrer" href="/glossary/#icsea" target="_blank">ICSEA </a>value to the selected school, which allows fair comparisons to be made. </span><span>Schools with students who have similar levels of educational advantage will have similar <a rel="noopener noreferrer" href="/glossary/#icsea" target="_blank">ICSEA </a>values, even though they may be located in various parts of Australia and may have different facilities and resources.</span></p>
+<p><span></span>Use the drop down menu to change the year and domain. View similar schools as a bubble chart or listed alphabetically. You can also see the <span>approximate distribution of all Australian schools' average scores in the selected domain by selected 'All schools' in the drop down menu. </span></p>
+<p> </p>
+<p> </p>
+
+
+
+<div class="timeline clearfix">
+    <div class="owl-carousel owl-theme">
+            <div class="item" id="0">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2008" data-available=1>2008</a>
+                </span>
+            </div>
+            <div class="item" id="1">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2009" data-available=1>2009</a>
+                </span>
+            </div>
+            <div class="item" id="2">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2010" data-available=1>2010</a>
+                </span>
+            </div>
+            <div class="item" id="3">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2011" data-available=1>2011</a>
+                </span>
+            </div>
+            <div class="item" id="4">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2012" data-available=1>2012</a>
+                </span>
+            </div>
+            <div class="item" id="5">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2013" data-available=1>2013</a>
+                </span>
+            </div>
+            <div class="item" id="6">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2014" data-available=1>2014</a>
+                </span>
+            </div>
+            <div class="item" id="7">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2015" data-available=1>2015</a>
+                </span>
+            </div>
+            <div class="item" id="8">
+                <span>
+                        <a class="" href="/school/46461/naplan/similar/2016" data-available=1>2016</a>
+                </span>
+            </div>
+            <div class="item" id="9">
+                <span>
+                        <a class="chosen-year" href="/school/46461/naplan/similar/2017" data-available=1>2017</a>
+                </span>
+            </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.owl-carousel').owlCarousel({
+                loop: false,
+                margin: 10,
+                nav: true,
+                startPosition: '9',
+                dots: false,
+                navText: ["&lt;&lt;", "&gt;&gt;"],
+                responsive: {
+                    0: {
+                        items: 4
+                    },
+                    600: {
+                        items: 6
+                    },
+                    1000: {
+                        items: 8
+                    }
+                }
+            });
+    })
+</script><form action="/school/46461/naplan/similar" method="post">                    <span id="SchoolYearDropDownFilter">
+                        
+
+<div class="dropdown-container">
+    <input id="SchoolYearId" name="SchoolYearId" type="hidden" value="5" />
+    <a class="nav-title" href="#">
+        <span>Year 5</span>
+        <em class="fa fa-angle-down" aria-hidden="true"></em>
+    </a>
+        <ul>
+                <li data-value="3">
+                    <span>Year 3</span>
+                </li>
+                <li data-value="5">
+                    <span>Year 5</span>
+                </li>
+        </ul>
+</div>
+
+                    </span>
+                    <span id="DomainsDropDownFilter">
+                        
+
+<div class="dropdown-container">
+    <input id="DomainId" name="DomainId" type="hidden" value="1" />
+    <a class="nav-title" href="#">
+        <span>Reading</span>
+        <em class="fa fa-angle-down" aria-hidden="true"></em>
+    </a>
+        <ul>
+                <li data-value="1">
+                    <span>Reading</span>
+                </li>
+                <li data-value="2">
+                    <span>Writing</span>
+                </li>
+                <li data-value="4">
+                    <span>Spelling</span>
+                </li>
+                <li data-value="5">
+                    <span>Grammar and Punctuation</span>
+                </li>
+                <li data-value="6">
+                    <span>Numeracy</span>
+                </li>
+        </ul>
+</div>
+
+                    </span>
+                    <span id="ViewModeDropDownFilter">
+                        
+
+<div class="dropdown-container">
+    <input id="ViewModeId" name="ViewModeId" type="hidden" value="0" />
+    <a class="nav-title" href="#">
+        <span>Similar schools</span>
+        <em class="fa fa-angle-down" aria-hidden="true"></em>
+    </a>
+        <ul>
+                <li data-value="0">
+                    <span>Similar schools</span>
+                </li>
+                <li data-value="1">
+                    <span>Similar schools list</span>
+                </li>
+                <li data-value="2">
+                    <span>All schools</span>
+                </li>
+        </ul>
+</div>
+
+                    </span>
+                    <button id="submit-filter" type="submit">Submit</button>
+                    <div class="legend">
+                        <div class="interpret">
+                            <span class="btn" data-js="open">Interpreting this graph</span>
+                        </div>
+                        Year 5 Reading Similar schools
+                    </div>
+                    <div class="clearfix"></div>
+</form>
+<script>
+
+    function tooltipbuilder() {
+        var schoolInformation = $.parseJSON(this.point.description);
+
+        return "<div>" 
+                +"<div class='bubble-tooltip-header'><strong><a href='/School/" + schoolInformation.schoolId + "'> " + schoolInformation.schoolName + "</a></strong></div>"
+                + "<div class='bubble-tooltip-content'><strong>"
+                + schoolInformation.mean
+                + "</strong></div>"
+                +"<div class='bubble-tooltip-content'>"
+                + schoolInformation.lowerMargin + "~" + schoolInformation.upperMargin
+                +"</div>"
+                +"</div>";
+    }
+</script>
+
+
+    <div style="overflow-x: auto;">
+        <div style="min-width:322px;">
+            <div id='naplanSimilarSchoolsBubble' style='height:408;min-width:;clear:both;margin: 0 auto;'></div><script type='text/javascript'>if (document.addEventListener) {document.addEventListener("DOMContentLoaded", function() {createChartnaplanSimilarSchoolsBubble();});} else if (document.attachEvent) {document.attachEvent("onreadystatechange", function(){if (document.readyState === "complete"){document.detachEvent("onreadystatechange", arguments.callee);createChartnaplanSimilarSchoolsBubble();}});}function createChartnaplanSimilarSchoolsBubble() {var ChartOptions = {"credits":{"enabled":false},"exporting":{"enabled":false},"xAxis":[{"endOnTick":true,"min":520,"tickInterval":5,"max":600,"tickLength":0,"title":{"text":"Average achievement score","offset":50},"labels":{"step":2}}],"chart":{"height":408,"style":{"min-width":"322px"},"renderTo":"naplanSimilarSchoolsBubble"},"yAxis":[{"tickInterval":1,"min":0,"labels":{"enabled":false},"max":12,"title":{"text":"Number of schools"},"lineWidth":1}],"tooltip":{"style":{"padding":"0","pointerEvents":"auto"},"hideDelay":1000,"formatter":tooltipbuilder,"useHTML":true},"title":{"text":""},"series":[{"animation":"false","type":"scatter","data":[{"x":525,"description":"{\"schoolId\":49811,\"mean\":523,\"lowerMargin\":509,\"upperMargin\":538,\"schoolName\":\"Prince Alfred College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-5.png)"},"y":0.5},{"x":525,"description":"{\"schoolId\":43441,\"mean\":524,\"lowerMargin\":502,\"upperMargin\":545,\"schoolName\":\"St Joseph\u0027s Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-5.png)"},"y":1.5},{"x":530,"description":"{\"schoolId\":43395,\"mean\":529,\"lowerMargin\":509,\"upperMargin\":549,\"schoolName\":\"St Mark\u0027s Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":0.5},{"x":530,"description":"{\"schoolId\":49178,\"mean\":531,\"lowerMargin\":513,\"upperMargin\":550,\"schoolName\":\"Goodwood Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":1.5},{"x":530,"description":"{\"schoolId\":48499,\"mean\":531,\"lowerMargin\":516,\"upperMargin\":546,\"schoolName\":\"Rossmoyne Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":2.5},{"x":530,"description":"{\"schoolId\":49702,\"mean\":532,\"lowerMargin\":515,\"upperMargin\":549,\"schoolName\":\"Mercedes College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":3.5},{"x":535,"description":"{\"schoolId\":46615,\"mean\":534,\"lowerMargin\":521,\"upperMargin\":546,\"schoolName\":\"Ascot State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":0.5},{"x":535,"description":"{\"schoolId\":46159,\"mean\":534,\"lowerMargin\":518,\"upperMargin\":549,\"schoolName\":\"The Geelong College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":1.5},{"x":535,"description":"{\"schoolId\":49407,\"mean\":536,\"lowerMargin\":523,\"upperMargin\":549,\"schoolName\":\"Burnside Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":2.5},{"x":535,"description":"{\"schoolId\":45910,\"mean\":536,\"lowerMargin\":517,\"upperMargin\":554,\"schoolName\":\"Stella Maris School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":3.5},{"x":540,"description":"{\"schoolId\":43240,\"mean\":538,\"lowerMargin\":522,\"upperMargin\":554,\"schoolName\":\"Our Lady of Good Counsel Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":0.5},{"x":540,"description":"{\"schoolId\":41057,\"mean\":538,\"lowerMargin\":516,\"upperMargin\":560,\"schoolName\":\"Vaucluse Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":1.5},{"x":540,"description":"{\"schoolId\":41234,\"mean\":539,\"lowerMargin\":527,\"upperMargin\":551,\"schoolName\":\"North Sydney Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":2.5},{"x":540,"description":"{\"schoolId\":50335,\"mean\":540,\"lowerMargin\":526,\"upperMargin\":554,\"schoolName\":\"Highgate School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":3.5},{"x":545,"description":"{\"schoolId\":48483,\"mean\":543,\"lowerMargin\":525,\"upperMargin\":561,\"schoolName\":\"North Perth Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":0.5},{"x":545,"description":"{\"schoolId\":43891,\"mean\":543,\"lowerMargin\":531,\"upperMargin\":556,\"schoolName\":\"William Clarke College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":1.5},{"x":545,"description":"{\"schoolId\":41010,\"mean\":544,\"lowerMargin\":529,\"upperMargin\":560,\"schoolName\":\"Coogee Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":2.5},{"x":545,"description":"{\"schoolId\":48899,\"mean\":544,\"lowerMargin\":518,\"upperMargin\":571,\"schoolName\":\"Sacred Heart Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":3.5},{"x":545,"description":"{\"schoolId\":43252,\"mean\":544,\"lowerMargin\":526,\"upperMargin\":562,\"schoolName\":\"St Agatha\u0027s Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":4.5},{"x":545,"description":"{\"schoolId\":49793,\"mean\":546,\"lowerMargin\":529,\"upperMargin\":562,\"schoolName\":\"Concordia College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":5.5},{"x":545,"description":"{\"schoolId\":44553,\"mean\":546,\"lowerMargin\":529,\"upperMargin\":562,\"schoolName\":\"Ormond Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":6.5},{"x":545,"description":"{\"schoolId\":44508,\"mean\":546,\"lowerMargin\":528,\"upperMargin\":563,\"schoolName\":\"Surrey Hills Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":7.5},{"x":545,"description":"{\"schoolId\":44630,\"mean\":547,\"lowerMargin\":534,\"upperMargin\":561,\"schoolName\":\"Black Rock Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":8.5},{"x":545,"description":"{\"schoolId\":46401,\"mean\":547,\"lowerMargin\":533,\"upperMargin\":560,\"schoolName\":\"Windsor State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-4.png)"},"y":9.5},{"x":550,"description":"{\"schoolId\":49984,\"mean\":549,\"lowerMargin\":533,\"upperMargin\":564,\"schoolName\":\"Brindabella Christian College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":550,"description":"{\"schoolId\":46092,\"mean\":550,\"lowerMargin\":530,\"upperMargin\":570,\"schoolName\":\"Galilee Regional Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":550,"description":"{\"schoolId\":49922,\"mean\":550,\"lowerMargin\":535,\"upperMargin\":564,\"schoolName\":\"Majura Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":2.5},{"x":550,"description":"{\"schoolId\":45831,\"mean\":550,\"lowerMargin\":514,\"upperMargin\":587,\"schoolName\":\"St Roch\u0027s School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":3.5},{"x":550,"description":"{\"schoolId\":44564,\"mean\":550,\"lowerMargin\":536,\"upperMargin\":565,\"schoolName\":\"Wales Street Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":4.5},{"x":550,"description":"{\"schoolId\":49986,\"mean\":551,\"lowerMargin\":503,\"upperMargin\":598,\"schoolName\":\"Canberra Christian School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":5.5},{"x":555,"description":"{\"schoolId\":41224,\"mean\":553,\"lowerMargin\":541,\"upperMargin\":565,\"schoolName\":\"Manly West Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":555,"description":"{\"schoolId\":44882,\"mean\":553,\"lowerMargin\":539,\"upperMargin\":568,\"schoolName\":\"Pinewood Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":555,"description":"{\"schoolId\":46184,\"mean\":554,\"lowerMargin\":539,\"upperMargin\":570,\"schoolName\":\"Mentone Grammar School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":2.5},{"x":555,"description":"{\"schoolId\":43673,\"mean\":554,\"lowerMargin\":535,\"upperMargin\":573,\"schoolName\":\"Santa Sabina College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":3.5},{"x":555,"description":"{\"schoolId\":47690,\"mean\":555,\"lowerMargin\":537,\"upperMargin\":572,\"schoolName\":\"Our Lady of the Rosary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":4.5},{"x":555,"description":"{\"schoolId\":46249,\"mean\":555,\"lowerMargin\":542,\"upperMargin\":568,\"schoolName\":\"Westbourne Grammar School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":5.5},{"x":555,"description":"{\"schoolId\":45869,\"mean\":556,\"lowerMargin\":535,\"upperMargin\":578,\"schoolName\":\"St Bede\u0027s School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":6.5},{"x":555,"description":"{\"schoolId\":44660,\"mean\":556,\"lowerMargin\":540,\"upperMargin\":572,\"schoolName\":\"Wattle Park Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":7.5},{"x":555,"description":"{\"schoolId\":45641,\"mean\":557,\"lowerMargin\":539,\"upperMargin\":576,\"schoolName\":\"St Mary\u0027s School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":8.5},{"x":555,"description":"{\"schoolId\":41287,\"mean\":557,\"lowerMargin\":543,\"upperMargin\":571,\"schoolName\":\"Thornleigh West Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":9.5},{"x":555,"description":"{\"schoolId\":46402,\"mean\":557,\"lowerMargin\":537,\"upperMargin\":577,\"schoolName\":\"Toowong State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":10.5},{"x":560,"description":"{\"schoolId\":48002,\"mean\":558,\"lowerMargin\":545,\"upperMargin\":571,\"schoolName\":\"All Saints Anglican School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":560,"description":"{\"schoolId\":47195,\"mean\":559,\"lowerMargin\":547,\"upperMargin\":571,\"schoolName\":\"Holland Park State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":560,"description":"{\"schoolId\":46463,\"mean\":561,\"lowerMargin\":538,\"upperMargin\":585,\"schoolName\":\"Petrie Terrace State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":2.5},{"x":560,"description":"{\"schoolId\":43386,\"mean\":561,\"lowerMargin\":535,\"upperMargin\":588,\"schoolName\":\"St Anthony\u0027s Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":3.5},{"x":560,"description":"{\"schoolId\":41305,\"mean\":562,\"lowerMargin\":550,\"upperMargin\":574,\"schoolName\":\"Oakhill Drive Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":4.5},{"x":560,"description":"{\"schoolId\":43944,\"mean\":562,\"lowerMargin\":547,\"upperMargin\":578,\"schoolName\":\"The Illawarra Grammar School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":5.5},{"x":565,"description":"{\"schoolId\":46235,\"mean\":563,\"lowerMargin\":550,\"upperMargin\":576,\"schoolName\":\"Donvale Christian College\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":565,"description":"{\"schoolId\":44897,\"mean\":563,\"lowerMargin\":550,\"upperMargin\":576,\"schoolName\":\"Eltham East Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":565,"description":"{\"schoolId\":46461,\"mean\":563,\"lowerMargin\":548,\"upperMargin\":578,\"schoolName\":\"Sherwood State School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-ss.png)"},"y":2.5},{"x":565,"description":"{\"schoolId\":43928,\"mean\":563,\"lowerMargin\":545,\"upperMargin\":581,\"schoolName\":\"St George Christian School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":3.5},{"x":565,"description":"{\"schoolId\":44855,\"mean\":564,\"lowerMargin\":546,\"upperMargin\":582,\"schoolName\":\"Beverley Hills Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":4.5},{"x":565,"description":"{\"schoolId\":43235,\"mean\":564,\"lowerMargin\":543,\"upperMargin\":586,\"schoolName\":\"Our Lady of Dolours Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":5.5},{"x":565,"description":"{\"schoolId\":45023,\"mean\":566,\"lowerMargin\":551,\"upperMargin\":582,\"schoolName\":\"Camelot Rise Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":6.5},{"x":565,"description":"{\"schoolId\":45939,\"mean\":567,\"lowerMargin\":525,\"upperMargin\":608,\"schoolName\":\"St Bridget\u0027s School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":7.5},{"x":570,"description":"{\"schoolId\":41022,\"mean\":571,\"lowerMargin\":558,\"upperMargin\":585,\"schoolName\":\"Haberfield Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":570,"description":"{\"schoolId\":41027,\"mean\":572,\"lowerMargin\":555,\"upperMargin\":589,\"schoolName\":\"Kensington Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":575,"description":"{\"schoolId\":43460,\"mean\":576,\"lowerMargin\":549,\"upperMargin\":602,\"schoolName\":\"St Martha\u0027s Catholic Primary School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":0.5},{"x":575,"description":"{\"schoolId\":41730,\"mean\":577,\"lowerMargin\":565,\"upperMargin\":589,\"schoolName\":\"Carlingford West Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-3.png)"},"y":1.5},{"x":580,"description":"{\"schoolId\":41140,\"mean\":581,\"lowerMargin\":569,\"upperMargin\":594,\"schoolName\":\"Leichhardt Public School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-2.png)"},"y":0.5},{"x":595,"description":"{\"schoolId\":50402,\"mean\":593,\"lowerMargin\":574,\"upperMargin\":612,\"schoolName\":\"Geelong Grammar School\"}","marker":{"symbol":"url(/Content/images/naplan/graphs/bubble-2.png)"},"y":0.5}]}],"plotOptions":{"series":{"states":{"hover":{"enabled":false}},"marker":{"radius":0}}}};new Highcharts.chart("naplanSimilarSchoolsBubble",ChartOptions);}</script>
+        </div>
+    </div>
+<script src="/Content/js/views/device-orientation.js"></script>
+<script>
+             document.write("<div class=\"info\" id=\"devicemode\">");
+             document.write("<p>Graphs and tables on mobile devices are presented better in landscape orientation</p>");
+             document.write("</div>");
+             $(window).resize(function() {
+                 FindDeviceModeToDisplayText();
+             });
+             if (!IsItMobileDevicePortraitMode())
+             {
+                 $("#devicemode").hide();
+             }
+</script>    <table class="legend-table">
+        <tbody>
+            <tr>
+                <td></td>
+                <td>
+                    <strong class="highcharts-labels">Chart legend</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-ss.png" alt="substantially above icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Selected school </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-1.png" alt="above icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Substantially above: 0.5 or more standard deviations above the selected school&#39;s average</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-2.png" alt="close to icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Above: 0.2 or more, but less than 0.5 standard deviations above the selected school&#39;s average</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-3.png" alt="below icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Close to: within 0.2 standard deviations of the selected school&#39;s average.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-4.png" alt="substantially below icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Below: 0.2 or more, but less than 0.5 standard deviations below the selected school&#39;s average</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/Content/images/naplan/graphs/bubble-5.png" alt="substantially below icon" />
+                </td>
+                <td>
+                    <span class="naplanlegend">Substantially below: 0.5 or more standard deviations below the selected school&#39;s average</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+        </div>
+
+        <div class="popup">
+    <p><a rel="noopener noreferrer" data-udi="umb://media/aa7e58d1df4946739e31156a41d338f9" href="/media/1444/naplan-results_ss.jpg" target="_blank" title="Naplan results_SS.jpg"><img style="width: 500px; height: 310.73943661971833px;" src="/media/1444/naplan-results_ss.jpg?width=500&amp;height=310.73943661971833" alt="" data-udi="umb://media/aa7e58d1df4946739e31156a41d338f9" /></a></p>
+    <button name="close"><img src="/Content/images/cross.svg" alt="close" /></button>
+</div>
+
+            
+<footer>
+    <div class="social">
+        <div class="social-wrapper">
+            <div class="floatright">
+                <p>Follow ACARA</p> 
+                <div class="socialicons">
+                    <div class="social-icon fb">
+                        <a id="uid-facebook-link" href="https://www.facebook.com/ACARAeduau" title="Facebook" target="_blank"><img src=/media/1006/fb.png alt="Facebook"></a>
+                    </div>
+                    <div class="social-icon tw">
+                        <a id="uid-twitter-link" href="https://twitter.com/ACARAeduau" title="Twitter" target="_blank"><img src=/media/1007/tw.png alt="Twitter"></a>
+                    </div>
+                    <div class="social-icon in">
+                        <a id="uid-linkedin-link" href="https://www.linkedin.com/company/668120/" title="Linked in" target="_blank"><img src=/media/1009/in.png alt="Linked in"></a>
+                    </div>
+                    <div class="social-icon yt">
+                        <a id="uid-youtube-link" href="https://www.youtube.com/user/ACARAeduau" title="Youtube" target="_blank"><img src=/media/1008/yt.png alt="Youtube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-wrapper">
+        <div class="contact-section">
+            <div class="column1 width_a">
+                <h3>Contact details</h3>
+<p>Australian Curriculum, Assessment and Reporting Authority (ACARA)</p>
+<p>Level 13, Tower B, Centennial Plaza, <br />280 Elizabeth Street, Sydney, NSW 2000</p>
+<p>General enquiries: <span>1300 895 563 </span></p>
+<div id="selenium-highlight"></div>
+            </div>
+            <div class="column2 width_a">
+                <h3>Other links</h3>
+<ul>
+<li><a data-udi="umb://document/bc01e48527d146a690848c720b332d70" href="/site-map/" title="Site map">Sitemap</a></li>
+<li><a data-udi="umb://document/3a253efb690943d182440d23d877e9a3" href="/copyright/" title="Copyright and terms of use">Copyright</a></li>
+<li><a data-udi="umb://document/c00f3c5b6caa4e5f8b6be2287c92703e" href="/terms-of-use/" title="Terms of use">Terms of use</a></li>
+<li><a data-udi="umb://document/edf13b16e82846fea02864dfa808bc90" href="/accessibility/" title="Accessibility">Accessibility</a></li>
+<li><a rel="noopener noreferrer" href="http://www.acara.edu.au/contact-us/privacy" target="_blank" title="Privacy policy">Privacy policy</a></li>
+<li><a rel="noopener noreferrer" href="http://www.acara.edu.au/contact-us/acara-data-access" target="_blank" title="Data access program">Data access program</a></li>
+</ul>
+<div id="selenium-highlight"></div>
+            </div>
+            <div class="column3 width_b">
+                <ul>
+                    <li class="principal-portal-link">
+                        <a href="/principals/login/">Principals&#39; Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-logos">
+            <div class="wrapper">
+                <a href="http://www.acara.edu.au/" target="_blank">
+                    <img src="/Content/images/logos/acara_white.svg" alt="ACARA website" />
+                </a>
+                <a href="https://www.australiancurriculum.edu.au/" target="_blank">
+                    <img class="small" src="/Content/images/logos/AC_white.svg" alt="Australian Curriculum website" />
+                </a>
+                <a href="https://www.nap.edu.au/" target="_blank">
+                    <img class="small" src="/Content/images/logos/nap_white.svg" alt="NAP website" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <p class="copyright">&copy; Australian Curriculum, Assessment and Reporting Authority</p>
+</footer>
+            <div class="site-cache" id="site-cache"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formalize/1.2/jquery.formalize.min.js"></script>
+    <script src="/Content/js/scripts.min.js?v-qaGXidUbYA1WBExGBpn/Bg=="></script>
+    <script>
+        window.ga = function () { ga.q.push(arguments) };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-17515482-8', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
