@@ -15,11 +15,11 @@ import time
 import os
 
 
-# In[2]:
+# In[11]:
 
 
 # setting directories for file loads and saves
-logs_dir = "../data/logs/"
+
 data_dir = "../data/raw/"
 load_dir = save_dir = "../data/interim/"
 final_dir = "../data/processed/"
@@ -27,7 +27,7 @@ final_dir = "../data/processed/"
 
 # ## load in reference data files for scraper
 
-# In[4]:
+# In[48]:
 
 
 # testing directories
@@ -48,11 +48,11 @@ all_school_years_df.head()
 
 # ## global variables here
 
-# In[5]:
+# In[14]:
 
 
 # params for Request and vars for loops
-SchoolYearId = "9"
+SchoolYearId = "5"
 DomainId = ["1", "2", "4", "5", "6"]
 ViewModeId = "0"
 years_str = ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']
@@ -68,7 +68,7 @@ dict_DomainId = {
     }
 
 
-# In[9]:
+# In[88]:
 
 
 
@@ -87,11 +87,10 @@ remaining_schools_list = one_year_all_schools_list
 df_columns = ['schoolId', 'grade', 'year', 'domain', 'mean', 'lower', 'upper']
 df_dtypes = {'schoolId' : int, 'grade' : int, 'year' : int, 'domain' : str,
              'mean': int, 'lower': int, 'upper': int}
-results_df = pd.DataFrame(columns = df_columns)
+results_df = pd.DataFrame(columns = df_columns, dtype = df_dtypes)
 
 # initialise test vars
 last_school = 1
-next_school = 'none'
 
 
 # In[ ]:
@@ -113,7 +112,7 @@ results_df = pd.read_csv("Courses/myschool/40151_results_df.csv")
 last_school = 1
 
 
-# In[ ]:
+# In[123]:
 
 
 # load shool IDs list and pop errored 
@@ -126,9 +125,10 @@ remaining_schools_list.pop(0)
 #check test vars not equal
 print('next: ',remaining_schools_list[0])
 last_school = 1
+next_school
 
 
-# In[ ]:
+# In[178]:
 
 
 last_school = 1
@@ -137,11 +137,11 @@ remaining_schools_list[:5]
 
 # ## Loop starts here
 
-# In[10]:
+# In[179]:
 
 
 # initialise log file with run info
-log = open(logs_dir + "log_myschools_runs.txt", "a+")
+log = open("log_myschools_runs.txt", "a+")
 log.write('\r\n----New Run---- starting with next school: ' + next_school + '\r\n')
 # TODO add proper logging to project and or add DateTime stamp
 log.close()
@@ -163,7 +163,7 @@ while len(remaining_schools_list) > 0:
     print('remaining schools:', len(remaining_schools_list),
      'next school:', next_school)
     
-    log = open(logs_dir + "log_myschools_runs.txt", "a+")
+    log = open("log_myschools_runs.txt", "a+")
     log.write('remaining schools: ' + str(len(remaining_schools_list)) 
               + ', next school: ' + str(next_school) + '\n')
     log.close()
@@ -172,13 +172,13 @@ while len(remaining_schools_list) > 0:
     #check that we are not in a loop over the same school
     if next_school == last_school:
         #write current data sets to file and then break download loop
-        results_df.to_csv(save_dir + last_school + "_results_df.csv")
+        results_df.to_csv(last_school + "_results_df.csv")
         
-        pickle_on = open(save_dir + "remaining_schools_list.pickle", "wb")
+        pickle_on = open("remaining_schools_list.pickle", "wb")
         pickle.dump(remaining_schools_list, pickle_on)
         pickle_on.close()
         
-        f = open(logs_dir + last_school + "_error_text.html", "w+")
+        f = open(last_school + "_error_text.html", "w+")
         f.write(text)
         f.close()
         
@@ -269,21 +269,20 @@ while len(remaining_schools_list) > 0:
     #print('\n-------------------------------\nEnd of all YEARS loop')
     
 print('----End of Scrape!----')
+    
 
-results_df.to_csv(final_dir + "2017_year_9_results_df.csv")
 
-
-# In[ ]:
+# In[165]:
 
 
 # Upon error above, save current results and sub-results by running this
 results_df.to_csv(last_school + "_results_df.csv")
 
-pickle_on = open(save_dir + "remaining_schools_list.pickle", "wb")
+pickle_on = open("remaining_schools_list.pickle", "wb")
 pickle.dump(remaining_schools_list, pickle_on)
 pickle_on.close()
 
-f = open(save_dir + last_school + "_error_text.html", "w+")
+f = open(last_school + "_error_text.html", "w+")
 f.write(text)
 f.close()
 
@@ -297,19 +296,19 @@ print(len(similar_schools_list), len(mean_list),
       len(lower_list), len(upper_list))
 
 
-# In[14]:
+# In[185]:
 
 
-results_df.to_csv(final_dir + "2017_year_9_results_df.csv")
+results_df.to_csv("2017_year_5_results_df.csv")
 
 
-# In[13]:
+# In[182]:
 
 
-results_df.head()
+results_df.info()
 
 
-# In[ ]:
+# In[143]:
 
 
 # if you can correct results from errored run, then append df
@@ -331,19 +330,19 @@ results_df = results_df.append(temp_results_df, ignore_index=True)
 
 
 
-# In[15]:
+# In[183]:
 
 
 results_df.tail(5)
 
 
-# In[ ]:
+# In[148]:
 
 
 results_df.info()
 
 
-# In[ ]:
+# In[156]:
 
 
 temp_results_df = pd.DataFrame({'schoolId' : '41798', 
@@ -358,7 +357,7 @@ temp_results_df = pd.DataFrame({'schoolId' : '41798',
 results_df = results_df.append(temp_results_df, ignore_index=True)
 
 
-# In[ ]:
+# In[159]:
 
 
 one_year_all_schools_df = all_school_years_df.loc[years_int[-1]]
@@ -369,7 +368,7 @@ print(len(one_year_all_schools_list), len(remaining_schools_list))
 remaining_schools_list[:10]
 
 
-# In[ ]:
+# In[160]:
 
 
 remaining_schools_list = [x for x in remaining_schools_list if x > 41725]
@@ -377,7 +376,7 @@ print(len(one_year_all_schools_list), len(remaining_schools_list))
 remaining_schools_list[:10]
 
 
-# In[ ]:
+# In[164]:
 
 
 del remaining_schools_list[:8]
@@ -390,7 +389,7 @@ remaining_schools_list[:10]
 
 
 
-# In[ ]:
+# In[139]:
 
 
 

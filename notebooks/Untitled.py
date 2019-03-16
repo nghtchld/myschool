@@ -1,90 +1,56 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Loop of clean MySchool results code for scraping all results 
-
-# In[1]:
-
-
-import pandas as pd
-import numpy as np
-import requests
-import re
-import pickle
-
-
-# ## import previously generated School IDs list
-# The first school ID will be used in the URL and Request to start the loop
-# * TODO write code for accessing latest school profile xlsx file from site and extracting just the 'ACARA School ID' values to a list / df
-
 # In[3]:
 
 
-pickle_off = open("allSchoolIdsList.pickle", "rb")
-all_school_ids_list = pickle.load(pickle_off)
-pickle_off.close()
-all_school_ids_list[:5]
+import numpy as np
+import pandas as pd
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 
-# ## global variables here
+# In[5]:
+
+
+# setting directories for file loads and saves
+
+data_dir = "../data/raw/"
+load_dir = save_dir = "../data/interim/"
+final_dir = "../data/processed/"
+
+
+# In[7]:
+
+
+xl7 = pd.read_csv(final_dir + "2017_year_7_results_df.csv", index_col=0)
+xl7.head()
+
 
 # In[17]:
 
 
-SchoolYearId = "5"
-DomainId = ["1", "2", "4", "5", "6"]
-ViewModeId = "0"
-year = ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']
+xl7['mean'].hist(by = xl7['domain'], bins = 50, figsize = (9,12))
 
 
-# ## Loop starts here
-
-# In[21]:
+# In[22]:
 
 
-url = ("https://www.myschool.edu.au/school/" 
-       + str(all_school_ids_list[0])
-       + "/naplan/similar/"
-       + year[-1])
-print(url)
-
-# adding data for POST to retrieve similar school list (ViewModeId = 1)
-payload = {"SchoolYearId" : SchoolYearId, "DomainId" : DomainId[0], "ViewModeId" : ViewModeId}
-print(payload)
+xl7.loc[xl7['domain'] == 'Reading'].describe()
 
 
-# In[15]:
+# In[19]:
 
 
-# Packages the request, send the request and catch the response: r
-r = requests.get(url, data = payload))
-
-# Extract the response: text
-text = r.text
-
-text[:50]
+xl7.info()
 
 
-# In[16]:
+# In[20]:
 
 
-f = open('test_text.html', mode = 'w', encoding = 'utf-8')
-f.write(text)
-f.close()
-
-
-# In[25]:
-
-
-similar_schools = re.findall(r'schoolId\\":(\d\d\d\d\d)', text)
-similar_schools = [int(i) for i in similar_schools]
-similar_schools[:5]
-
-
-# In[ ]:
-
-
-
+xl7.describe()
 
 
 # In[ ]:

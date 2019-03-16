@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[3]:
 
 
 import pandas as pd
@@ -13,52 +13,95 @@ import os
 #import requests
 
 
-# In[1]:
+# In[10]:
 
 
 # setting directories for file loads and saves
-
-data_dir = "../data/raw/"
+logs_dir = "../data/logs/"
+raw_dir = "../data/raw/"
 load_dir = save_dir = "../data/interim/"
 final_dir = "../data/processed/"
 
 
-# In[ ]:
+# In[16]:
 
 
-# load the school profiles 2008 - 2017 spreadsheet as df: xl
+# load and process the school profiles 2008 - 2017 spreadsheet as df: xl
 
-file = data_dir + "school-profile-2008-2017.xlsx"
-xl = pd.read_excel(file, sheet_name="School Profile")
+file = raw_dir + "school-profile-2008-2017.xlsx"
+
+cols_drop =  ['AGE ID', 'Campus Type',
+       'Rolled Reporting Description', 'School URL', 'Year Range',
+       'Geolocation', 'Teaching Staff', 'Non-Teaching Staff', 
+        'Full Time Equivalent Enrolments']
+
+xl = (pd.read_excel(file, sheet_name="School Profile")
+     .drop(labels=cols_drop, axis=1)
+      .rename(columns=lambda x: x.replace(" ", "_"))
+      .rename(columns=str.lower)
+      .rename(mapper = {"acara_school_id" : "school_id",
+                        "full_time_equivalent_teaching_staff" : "fte_teachers", 
+                        "language_background_other_than_english" : "lote", 
+                        "full_time_equivalent_non-teaching_staff" : "fte_other_staff", 
+                        "full_time_equivalent_enrolments" : "fte_enrolments"}, axis=1)
+     )
 
 # save df 
-xl.to_pickle(data_dir + "school_profiles_2008_2017_df.pickle")
+xl.to_pickle(save_dir + "school_profiles_2008_2017_df.pickle")
+
+xl.head()
+
+
+# In[18]:
+
+
+# functions to generate a school list for a grade, calendar year and school type
 
 
 # In[ ]:
 
 
-# generate a df for use in scrpaing loop: all_schools_sort_list
+xl.fillna()
 
-all_schools_sort_list = ['Calendar Year', 'School Type', 'ACARA School ID']
-all_school_years_df = xl.iloc[:, [0,1,8,5]].sort_values(all_schools_sort_list
-                                                ).set_index('Calendar Year')
+
+# In[6]:
+
+
+# generate a df for use in scraping loop: all_schools_sort_list
+
+all_schools_sort_list = ['calendar_year', 'school_type', 'ACARA School ID']
+all_school_years_df = xl.iloc[:, [0,1,8,5]].sort_values(all_schools_sort_list)
+all_school_years_df.reset_index(drop=True, inplace=True)
 
 all_school_years_df.to_pickle(save_dir + "all_school_years_df.pickle")
 
-all_school_years_df.head()
+all_school_years_df.fillna()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
 
 
 # generate a list of school IDs for one year and school type
+school_type = ['Combined', 'Secondary']
 
-year_type_df = all_school_years_df.loc[(years_int[-1]) & (
-    all_school_years_df['School Type'] == 'Primary')]
+one_year_all_schools_list = all_school_years_df.loc[
+    (all_school_years_df['Calendar Year'] == years_int[-1]) & 
+    (all_school_years_df['School Type'].isin(school_type)), 
+                                    'ACARA School ID'].values.tolist()
 
-primary_2017_schoolID_list = year_df['ACARA School ID'].values.tolist()
 primary_2017_schoolID_list[:5]
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:

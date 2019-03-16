@@ -16,7 +16,7 @@ import requests
 # import json
 
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -26,22 +26,23 @@ import requests
 
 
 # setting directories for file loads and saves
-data_dir = "../data/raw/"
+logs_dir = "../data/logs/"
+raw_dir = "../data/raw/"
 load_dir = save_dir = "../data/interim/"
 final_dir = "../data/processed/"
 
 
-# In[5]:
+# In[6]:
 
 
-xl = pd.read_pickle(load_dir + "allSchoolProfiles_df.pickle")
-#xl.head()
+xl = pd.read_pickle(load_dir + "school_profiles_2008_2017_df.pickle")
+xl.head()
 
 
-# In[16]:
+# In[4]:
 
 
-
+xl.info()
 
 
 # # MySchool website, Sherwood State School
