@@ -28,7 +28,8 @@ os.getcwd()
 
 load_dir = "../data/processed/"
 save_dir = "../data/interim/"
-
+raw_dir = "../data/raw/"
+logs_dir = "/data/logs/"
 
 # In[10]:
 

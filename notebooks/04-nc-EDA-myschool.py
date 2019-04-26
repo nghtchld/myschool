@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import numpy as np
 import pandas as pd
-
+import os
 import seaborn as sns
 get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib.pyplot as plt
@@ -14,10 +14,9 @@ plt.style.use('ggplot')
 sns.set(style='ticks', context='talk')
 
 
-# In[39]:
+# In[2]:
 
 
-import os
 os.getcwd()
 
 
@@ -43,18 +42,20 @@ final_dir = "../data/processed/"
 
 
 
-# In[127]:
+# In[25]:
 
 
 # load 2017, Year 7, NAPLAN scrpaed results
 
 xl7 = (pd.read_csv(final_dir + "2017_year_7_results_df.csv", index_col=0)
        .rename(columns=lambda x: x.replace(" ", "_"))
-       .rename(columns=str.lower))
+       .rename(columns=str.lower)
+       .rename(columns = {'schoolid' : 'school_id'})
+      )
 xl7.head()
 
 
-# In[145]:
+# In[5]:
 
 
 # load the school profiles 2008 - 2017 spreadsheet df: xl
@@ -65,43 +66,68 @@ xl = pd.read_pickle(data_dir + file)
 xl.head()
 
 
-# In[146]:
+# In[6]:
 
 
-xl.info()
+xl.columns
 
 
-# In[5]:
+# In[ ]:
 
 
 #xl7['mean'].hist(by = xl7['domain'], bins = 50, figsize = (9,12))
 
 
-# In[32]:
+# In[10]:
 
 
-xl7.info()
+xl_sub = xl.loc[:, ['calendar_year', 'school_id', 'school_name', 'state',
+       'postcode', 'school_type', 'icsea',
+       'bottom_sea_quarter', 'lower_middle_sea_quarter',
+       'upper_middle_sea_quarter', 'top_sea_quarter', 'fte_teachers',
+       'fte_other_staff', 'total_enrolments', 'indigenous_enrolments', 'lote']]
+xl_sub.head()
 
 
-# In[22]:
+# In[21]:
+
+
+xl_sub_2017 = xl_sub.loc[xl_sub['calendar_year'] == 2017].reset_index(drop=True)
+xl_sub_2017.head()
+
+
+# In[26]:
+
+
+xl_7_2017 = xl7.merge(xl_sub_2017)
+xl_7_2017.head()
+
+
+# In[27]:
+
+
+xl_7_2017.to_csv(save_dir + '2017_year_7_results_schools_info.csv')
+
+
+# In[ ]:
 
 
 xl7.loc[xl7['domain'] == 'Reading'].describe()
 
 
-# In[7]:
+# In[ ]:
 
 
 xl7.groupby(['domain']).mean().round(decimals=2)
 
 
-# In[120]:
+# In[17]:
 
 
-xl7.loc[xl7['schoolId'] == 41811]
+xl.loc[xl['school_id'] == 41811]
 
 
-# In[109]:
+# In[ ]:
 
 
 # find a particular ACARA school ID, e.g. Corinda State High School = 47449
@@ -119,14 +145,14 @@ id_of_school = (school_profiles_all.loc[
 id_of_school
 
 
-# In[61]:
+# In[ ]:
 
 
 # get index of school ID in all 2017 results list 
 school_all_results_index = xl7.loc[xl7['schoolId'] == id_of_school].index.tolist()
 
 
-# In[107]:
+# In[ ]:
 
 
 z = xl7.set_index('schoolId').loc[:, ['domain', 'mean']].groupby(['domain']).rank(method='max', ascending=False)
@@ -134,7 +160,7 @@ z = xl7.set_index('schoolId').loc[:, ['domain', 'mean']].groupby(['domain']).ran
 print('Max of rank:', max(z['mean']), '\nMin of rank', min(z['mean']))
 
 
-# In[110]:
+# In[ ]:
 
 
 top_10 = z.sort_values('mean').head(5).index.tolist()
@@ -147,28 +173,28 @@ for e in top_10:
     print(sname,)
 
 
-# In[101]:
+# In[ ]:
 
 
 print('Corinda rankings out of', max(z['mean']))
 z.loc[47449]
 
 
-# In[102]:
+# In[ ]:
 
 
 print('Indooroopilly rankings out of', max(z['mean']))
 z.loc[47431]
 
 
-# In[105]:
+# In[ ]:
 
 
 print('BBC rankings out of', max(z['mean']))
 z.loc[48011]
 
 
-# In[111]:
+# In[ ]:
 
 
 print('James Ruse rankings out of', max(z['mean']))
