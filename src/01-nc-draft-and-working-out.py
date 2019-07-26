@@ -26,10 +26,10 @@ import requests
 
 
 # setting directories for file loads and saves
-logs_dir = "../data/logs/"
-raw_dir = "../data/raw/"
-load_dir = save_dir = "../data/interim/"
-final_dir = "../data/processed/"
+logs_dir = "./data/logs/"
+raw_dir = "./data/raw/"
+load_dir = save_dir = "./data/interim/"
+final_dir = "./data/processed/"
 
 
 # In[6]:
@@ -350,22 +350,21 @@ years_int = [int(y) for y in years]
 
 
 all_schools_sort_list = ['Calendar Year', 'School Type', 'ACARA School ID']
-all_school_years_df = xl.iloc[:, [0,1,8,5]].sort_values(all_schools_sort_list
+all_schools_years_df = xl.iloc[:, [0,1,8,5]].sort_values(all_schools_sort_list
                                                 ).set_index('Calendar Year')
 
-all_school_years_df.head()
+all_schools_years_df.head()
 
 
 # In[12]:
 
 
-all_school_years_df.to_pickle(load_dir + "all_school_years_df.pickle")
 
 
 # In[53]:
 
 
-year_df = all_school_years_df.loc[years_int[0]]
+year_df = all_schools_years_df.loc[years_int[0]]
 one_yr_list = year_df['ACARA School ID'].values.tolist()
 one_yr_list[:5]
 
@@ -373,8 +372,8 @@ one_yr_list[:5]
 # In[59]:
 
 
-year_df = all_school_years_df.loc[(years_int[-1]) & (
-    all_school_years_df['School Type'] == 'Primary')]
+year_df = all_schools_years_df.loc[(years_int[-1]) & (
+    all_schools_years_df['School Type'] == 'Primary')]
 primary_2017_schoolID_list = year_df['ACARA School ID'].values.tolist()
 primary_2017_schoolID_list[:5]
 

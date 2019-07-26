@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "P:\\Python\\Jupyter\\Courses"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.py": "python"
+		},
+		"git.ignoreLimitWarning": true
+	}
+}
